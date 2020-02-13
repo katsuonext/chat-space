@@ -1,6 +1,6 @@
 ## 
 
-## userテーブル
+## usersテーブル
 
 |column|type|options|
 |------|----|-------|
@@ -10,21 +10,21 @@ email|ｓｔring|null: false, add_index : users, :email, unique: true|
 pass|ｓｔring|null: false|
 
 ### Association
-- has_many :groups_users
-- has_many :message
+- has_many :groups, through: :groups_users
+- has_many :messages
 
 
-### groupテーブル
+### groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 group_name|ｓｔring|null: false|
 group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :groups_users
-- has_many :message
+- has_many :users, through: :groups_users
+- has_many :messages
 
-## messageテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 text|string||
@@ -33,8 +33,8 @@ group_id|integer|null: false, foreign_key: true|
 user_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belong_to :user
-- belong_to :group
+- belong_to :users
+- belong_to :groups
 
 ## groups_usersテーブル
 
@@ -44,5 +44,5 @@ user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :group
-- belongs_to :user
+- belongs_to :groups
+- belongs_to :users
