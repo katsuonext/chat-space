@@ -1,0 +1,39 @@
+.side-bar
+  .side-bar__user-name
+    .top-items
+      .top-items__name
+        takashi
+      .top-items__icon
+        = link_to "#" do
+          %i.fa.fa-edit
+        = link_to "#" do
+          %i.fa.fa-cog
+  .side-bar__group-list
+    .groups
+      .group-name
+        techman
+      .group-newmessage
+        hellohello
+
+-# <%= link_to("URL") do %>
+-# 　<span class="fa fa-search search-btn"></span>
+
+-# <li class="new-group"><a href="#">new</a></li>
+  <li class="edit-user"><a href="#">edit</a></li>
+
+-# %i.fa.fa-cog
+  -# link_toには'='を適用します。
+
+-# sample.html.haml
+-# = link_to 表示する文言, URLパス, メソッド, クラス
+-# このように書きますが、以下のように書いてもエラーが起きてしまいます。
+
+-# index.html.haml
+-# = link_to edit_user_registration_path .fa.fa-cog
+-# = link_to edit_user_registration_path i.fa.fa-cog
+-# コンテントタグを使用する方法もあるみたいですが、以下のように書くとコードもすっきりし、正常に表示もされます。
+
+-# index.html.haml
+-# = link_to edit_user_registration_path do
+-#   %i.fa.fa-cog
+-# ネストさせて書かずに結構な時間はまっていたので、参考までに。
