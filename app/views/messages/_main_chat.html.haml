@@ -1,0 +1,33 @@
+.chat-main
+  .chat-main__group-info
+    .group-rebigname
+      .group-name1
+        test
+      .group-name2
+        .group-member-current
+          member :
+          %li.group-member-name1
+            machami
+          %li.group-member-name2
+            macchan
+          %li.group-member-name3
+            wadaakiko
+    = link_to "#" do
+      %i.edit Edit
+  .chat-main__message-list
+    .message-posts
+      .posts-name
+        hitoshi
+      .posts-inside
+        konnnitiwa
+  .chat-main__message-form
+    .message-box
+      .item-text
+        %input{placeholder:"type a message", class:"amessage"}
+      .item-icon
+        %label
+          = icon('fas', 'image fa-lg')
+          %input{type: "file", class: "aaa"}
+    .message-send
+      = link_to "#" do
+        %i.send Send
