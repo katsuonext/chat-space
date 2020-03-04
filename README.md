@@ -1,11 +1,11 @@
 ## 
 
-## usersテーブル
+## Usersテーブル
 
 |column|type|options|
 |------|----|-------|
 name|ｓｔring|null: false|
-email|ｓｔring|null: false, add_index : users, :email, unique: true|
+email|ｓｔring|null: false, add_index : Users, :email, unique: true|
 pass|ｓｔring|null: false|
 
 ### Association
