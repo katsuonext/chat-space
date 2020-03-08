@@ -4,13 +4,15 @@
       .top-items__name
         takashi
       .top-items__icon
-        = link_to "#" do
+        = link_to new_group_path do
           %i.fa.fa-edit
         = link_to edit_user_path(current_user) do
           %i.fa.fa-cog
   .side-bar__group-list
-    .groups
-      .group-name
-        techman
-      .group-newmessage
-        hellohello
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group.name
+            メッセージはまだありません。
