@@ -2,7 +2,7 @@
   .side-bar__user-name
     .top-items
       .top-items__name
-        takashi
+        = current_user.name
       .top-items__icon
         = link_to new_group_path do
           %i.fa.fa-edit
@@ -15,4 +15,4 @@
           .group__name
             = group.name
           .group.name
-            メッセージはまだありません。
+            = group.show_last_message
