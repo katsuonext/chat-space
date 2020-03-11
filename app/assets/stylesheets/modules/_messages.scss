@@ -95,7 +95,6 @@ body {
           display: inline-flex;
           .group-member-name1{
           }
-          
         }
       }
     }
@@ -110,6 +109,18 @@ body {
       text-decoration: none;
       border: 1px solid #38aef0;
     }
+
+    // .edit{
+    //   color: #38aef0;
+    //   font-size: 16px;
+    //   margin: 28px 40px 0 0;
+    //   padding: 0 20px;
+    //   height: 40px;
+    //   line-height: 40px;
+    //   display: inline-block;
+    //   text-decoration: none;
+    //   border: 1px solid #38aef0;
+    // }
   }
   .messages{
     height: calc(100vh - 190px);
@@ -151,29 +162,29 @@ body {
           height: 50px;
           width: calc(100% - 150px);
         }
+        .aaa{
+          display: none;
+          position: relative;
+        }
+        .fas{
+          position: absolute;
+          top: 20px;
+          right: 10px;
+        }
       }
-      .aaa{
-        display: none;
-        position: relative;
-      }
-      .fas{
+      .message-send{
+        background-color: #38aef0;
+        height: 50px;
+        width: 6vw;
+        margin-left: 160px;
+        text-align: center;
         position: absolute;
-        top: 20px;
-        right: 10px;
-
-      }   
-    }
-    .message-send{
-      background-color: #38aef0;
-      height: 50px;
-      width: 5vw;
-      margin-left: 15px;
-      text-align: center;
-      .send{
-        display: inline-block;
-        text-decoration: none;
-        line-height: 50px;
-        color:#ffffff;
+        .send{
+          display: inline-block;
+          text-decoration: none;
+          line-height: 50px;
+          color:#ffffff;
+        }
       }
     }
   }
