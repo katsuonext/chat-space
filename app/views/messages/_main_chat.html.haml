@@ -1,26 +1,18 @@
 .chat-main
   .chat-main__group-info
     .group-rebigname
-      -# .group-name1.group
       .group-name1
         #{@group.name}
         .group-name2
           .group-member-current
             member :
             %li.group-member-name1
-              -# #{@group.users}
               - @group.users.each do |f|
                 = f.name
       = link_to edit_group_path(@group) do
         %i.edit Edit
   .messages
     = render @messages
-  -# .chat-main__message-list
-    -# .message-posts
-    -#   .posts-name
-    -#     hitoshi
-    -#   .posts-inside
-    -#     konnnitiwa
   .chat-main__message-form
     = form_for [@group, @message] do |f|
       .message-box
@@ -30,13 +22,3 @@
             = icon('fas', 'image fa-lg', class: 'icon')
             = f.file_field :image, class: "aaa"
           = f.submit 'Send', class: 'message-send'
-
-  -# .chat-main__message-form
-  -#   = form_for [@group, @message] do |f|
-  -#     = f.text_field :content, placeholder:"type a message", class:"amessage"
-  -#     .message-box
-  -#     .item-text
-  -#       = f.label :image, class: 'item-icon' do
-  -#         = icon('fas', 'image fa-lg', class: 'icon')
-  -#         = f.file_field :image, class: "aaa"
-  -#     = f.submit 'Send', class: 'message-send'
