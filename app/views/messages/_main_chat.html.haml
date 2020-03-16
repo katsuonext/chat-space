@@ -2,16 +2,16 @@
   .chat-main__group-info
     .group-rebigname
       -# .group-name1.group
-      .group-name1 
+      .group-name1
         #{@group.name}
-      .group-name2
-        .group-member-current
-          member :
-          %li.group-member-name1
-            -# #{@group.users}
-            - @group.users.each do |f|
-              = f.name
-      = link_to edit_group_path(@group) do 
+        .group-name2
+          .group-member-current
+            member :
+            %li.group-member-name1
+              -# #{@group.users}
+              - @group.users.each do |f|
+                = f.name
+      = link_to edit_group_path(@group) do
         %i.edit Edit
   .messages
     = render @messages
