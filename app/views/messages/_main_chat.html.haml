@@ -16,10 +16,10 @@
     = render @messages
   .chat-main__message-form
     = form_for [@group, @message] do |f|
-      .message-box
-        .item-text
-          = f.text_field :content, placeholder:"type a message", class:"amessage"
-          = f.label :image, class: 'item-icon' do
-            = icon('fas', 'image fa-lg', class: 'icon')
-            = f.file_field :image, class: "aaa"
-          = f.submit 'Send', class: 'message-send'
+      -# .message-box
+      .item-text
+        = f.text_field :content, placeholder:"type a message", class:"amessage"
+        = f.label :image, class: 'item-icon' do
+          = icon('far', 'image fa-lg')
+          = f.file_field :image, class: "aaa"
+      = f.submit 'Send', class: 'message-send'

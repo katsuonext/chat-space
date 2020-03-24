@@ -2,9 +2,8 @@ $(function(){
       function buildHTML(message){
         if ( message.image ) {
           var html =
-            `<div class="message">
-              <div class="message-posts">
-                <div class="message-posts__user-name">
+              `<div class="message-posts" data-message-id=${message.id}>
+                <div class="posts-name">
                   ${message.user_name}
                 </div>
               </div>
@@ -13,17 +12,15 @@ $(function(){
                   ${message.content}
                 </p>
               </div>
-              <img src=${message.image} >
-            </div>`
+              <img src=${message.image} >`
           return html;
         } else {
           var html =
-            `<div class="message">
-              <div class="message-posts">
-                <div class="message-posts__user-name">
+              `<div class="message-posts" data-message-id=${message.id}>
+                <div class="posts-name">
                   ${message.user_name}
                 </div>
-                <div class="message-posts__date">
+                <div class="posts-inside">
                   ${message.created_at}
                 </div>
               </div>
@@ -31,8 +28,7 @@ $(function(){
                 <p class="lower-message__content">
                   ${message.content}
                 </p>
-              </div>
-            </div>`
+              </div>`
           return html;
         };
       }
