@@ -57,17 +57,17 @@ body {
   &__group-list{
     height: calc(100vh - 100px);
     background-color: #2f3e51;
-    color: #ffffff;
     padding: 0 20px;
     overflow: scroll;
-    .group-name {
+    .group__name {
       font-size: 15px;
       padding-top: 20px;
-
+      color: #ffffff;
     }
-    .group-newmessage {
+    .group__newmessage {
       font-size: 11px;
       margin: 5px 0 40px 0;
+      color: #ffffff
     }
     }
 }
