@@ -3,8 +3,10 @@ $(function(){
         if ( message.image ) {
           var html =
               `<div class="message-posts" data-message-id=${message.id}>
-                <div class="posts-name">
-                  ${message.user_name}
+                <div class="message-post">
+                  <div class="posts-name">
+                    ${message.user_name}
+                  </div>
                 </div>
               </div>
               <div class="lower-message">
@@ -17,11 +19,13 @@ $(function(){
         } else {
           var html =
               `<div class="message-posts" data-message-id=${message.id}>
-                <div class="posts-name">
-                  ${message.user_name}
-                </div>
-                <div class="posts-inside">
-                  ${message.created_at}
+                <div class="message-post">
+                  <div class="posts-name">
+                    ${message.user_name}
+                  </div>
+                  <div class="posts-inside">
+                    ${message.created_at}
+                  </div>
                 </div>
               </div>
               <div class="lower-message">
