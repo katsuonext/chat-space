@@ -8,13 +8,13 @@ $(function(){
                     ${message.user_name}
                   </div>
                 </div>
-              </div>
-              <div class="lower-message">
-                <p class="lower-message__content">
-                  ${message.content}
-                </p>
-              </div>
-              <img src=${message.image} >`
+                <div class="lower-message">
+                  <p class="lower-message__content">
+                    ${message.content}
+                  </p>
+                </div>
+                <img src=${message.image} >
+              </div>`
           return html;
         } else {
           var html =
@@ -27,11 +27,11 @@ $(function(){
                     ${message.created_at}
                   </div>
                 </div>
-              </div>
-              <div class="lower-message">
-                <p class="lower-message__content">
-                  ${message.content}
-                </p>
+                <div class="lower-message">
+                  <p class="lower-message__content">
+                    ${message.content}
+                  </p>
+                </div>
               </div>`
           return html;
         };
