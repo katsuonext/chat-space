@@ -163,8 +163,6 @@ body {
   &__message-form{
     height: 90px;
     background-color: #ddd;
-    // display: flex;
-    // align-items: center;
     padding: 20px 40px;
     .message_forms{
       .new_message{
@@ -227,4 +225,8 @@ label {
 .new_message {
   width: 100%;
   display: flex;
+}
+
+.message-posts{
+  padding-bottom: 40px;
 }
